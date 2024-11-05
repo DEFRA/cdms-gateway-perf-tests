@@ -10,19 +10,19 @@
     </TestPlan>
     <hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group 1">
-        <intProp name="ThreadGroup.num_threads">10</intProp>
+        <intProp name="ThreadGroup.num_threads">1</intProp>
         <intProp name="ThreadGroup.ramp_time">0</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
-          <stringProp name="LoopController.loops">1000</stringProp>
+          <stringProp name="LoopController.loops">1</stringProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Gateway Clearance Request" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Gateway Clearance Request">
           <stringProp name="TestPlan.comments">Before running the suite, replace &apos;service-name&apos; the name/url of the service to test. $env is set to the name of th environment the test is running in.</stringProp>
-          <stringProp name="HTTPSampler.domain">cdms-gateway.dev.cdp-int.defra.cloud</stringProp>
+          <stringProp name="HTTPSampler.domain">cdms-gateway.perf-test.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF8</stringProp>
           <stringProp name="HTTPSampler.path">/perf-alvs-cds/ClearanceRequest</stringProp>
@@ -1748,9 +1748,9 @@
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Gateway Finalize Notification Request" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Gateway Finalize Notification Request">
           <stringProp name="TestPlan.comments">Before running the suite, replace &apos;service-name&apos; the name/url of the service to test. $env is set to the name of th environment the test is running in.</stringProp>
-          <stringProp name="HTTPSampler.domain">cdms-gateway.dev.cdp-int.defra.cloud</stringProp>
+          <stringProp name="HTTPSampler.domain">cdms-gateway.perf-test.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF8</stringProp>
           <stringProp name="HTTPSampler.path">/perf-alvs-cds/FinalizeNotificationRequest</stringProp>
@@ -1817,9 +1817,9 @@
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Gateway Decision Notification" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Gateway Decision Notification">
           <stringProp name="TestPlan.comments">Before running the suite, replace &apos;service-name&apos; the name/url of the service to test. $env is set to the name of th environment the test is running in.</stringProp>
-          <stringProp name="HTTPSampler.domain">cdms-gateway.dev.cdp-int.defra.cloud</stringProp>
+          <stringProp name="HTTPSampler.domain">cdms-gateway.perf-test.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF8</stringProp>
           <stringProp name="HTTPSampler.path">/perf-alvs-cds/DecisionNotification</stringProp>
