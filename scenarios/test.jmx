@@ -15,14 +15,14 @@
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
-          <stringProp name="LoopController.loops">50</stringProp>
+          <stringProp name="LoopController.loops">200</stringProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
       </ThreadGroup>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Gateway Decision Notification">
           <stringProp name="TestPlan.comments">Before running the suite, replace &apos;service-name&apos; the name/url of the service to test. $env is set to the name of th environment the test is running in.</stringProp>
-          <stringProp name="HTTPSampler.domain">cdms-gateway.dev.cdp-int.defra.cloud</stringProp>
+          <stringProp name="HTTPSampler.domain">cdms-gateway.perf-test.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF8</stringProp>
           <stringProp name="HTTPSampler.path">/perf-alvs-cds/DecisionNotification</stringProp>
@@ -1532,7 +1532,7 @@
           <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="49586">200</stringProp>
             </collectionProp>
@@ -1563,7 +1563,7 @@
         </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Gateway Finalize Notification Request">
           <stringProp name="TestPlan.comments">Before running the suite, replace &apos;service-name&apos; the name/url of the service to test. $env is set to the name of th environment the test is running in.</stringProp>
-          <stringProp name="HTTPSampler.domain">cdms-gateway.dev.cdp-int.defra.cloud</stringProp>
+          <stringProp name="HTTPSampler.domain">cdms-gateway.perf-test.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF8</stringProp>
           <stringProp name="HTTPSampler.path">/perf-alvs-cds/FinalizeNotificationRequest</stringProp>
@@ -1641,7 +1641,7 @@
         </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Gateway Clearance Request">
           <stringProp name="TestPlan.comments">Before running the suite, replace &apos;service-name&apos; the name/url of the service to test. $env is set to the name of th environment the test is running in.</stringProp>
-          <stringProp name="HTTPSampler.domain">cdms-gateway.dev.cdp-int.defra.cloud</stringProp>
+          <stringProp name="HTTPSampler.domain">cdms-gateway.perf-test.cdp-int.defra.cloud</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF8</stringProp>
           <stringProp name="HTTPSampler.path">/perf-alvs-cds/ClearanceRequest</stringProp>
